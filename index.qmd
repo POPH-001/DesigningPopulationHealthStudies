@@ -1,0 +1,746 @@
+---
+title: "Designing Population Health Studies"
+subtitle: "March 31 and April 2 2025<br> Eric Delmelle"
+format: revealjs
+---
+  
+  ```{=html}
+<style>
+  .circle {
+    background-color: #FFCCCB;
+      border: 2px solid teal;
+    border-radius: 50%;
+    color: teal;
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    text-align: center;
+    line-height: 75px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+.highlight-box {
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul {
+  font-size: 85%;
+}
+
+ul ul {
+  font-size: 75%;
+}
+</style>
+  ```
+
+![](imgs/chapter6.png){fig-align="center" width="327"}
+
+
+
+# <span style="text-align: center; color: blue;">Chapter Overview</span>
+
+- Research design fundamentals in epidemiology and public health  
+- Measurement validity and reliability  
+- Error and bias in population health research  
+- Study design approaches:  
+  - Cross-sectional  
+  - Case-control  
+  - Cohort  
+  - Experimental  
+- Qualitative methods and their integration with quantitative approaches  
+- Ethical considerations in population health research  
+
+---
+
+## <span class="circle">1</span> <span style="color: teal;">A Matter of Measurement</span>
+
+### Primary vs. Secondary Data
+
+**<span style="color: brown;">Primary data</span>:**  
+  - Data collected specifically for the purpose of the study.
+
+**<span style="color: brown;">Secondary data</span>:**  
+  - Data collected for other purposes but reorganized and reanalyzed.
+
+**Examples:**  
+- Health insurance claims data  
+- Employment records  
+- National health surveys
+
+---
+
+## <span class="circle">2</span> <span style="color: teal;">Primary vs. Secondary Data</span>
+
+::: {.columns}
+::: {.column width="60%"}
+
+- **Primary data**
+  - Collected specifically for a new study
+  - Controlled by the researcher
+  - Tailored to answer specific research questions
+
+- **Secondary data**
+  - Pre-existing data collected for another purpose
+  - Often large-scale and readily available
+  - May require cleaning or transformation
+
+
+:::
+::: {.column width="40%"}
+![](https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80)
+:::
+:::
+
+
+While primary data offers control and precision, secondary data can save time and resources.
+
+
+---
+
+## <span class="circle">3</span> <span style="color: teal;">Levels of Measurement</span>
+
+::: {.scrollable style="font-size: 0.7em;"}
+| Level        | Description                      | Example                                     | Operations                    |
+|--------------|----------------------------------|---------------------------------------------|-------------------------------|
+| **Nominal**  | Categories with no ranking       | Blood type, Sex                             | Equality/inequality           |
+| **Ordinal**  | Ordered categories               | Health self-rating: excellent, good, fair, poor | Greater than/less than        |
+| **Interval** | Equal units, no true zero        | Temperature in °C                          | Addition/subtraction          |
+| **Ratio**    | Equal units with true zero       | Weight, Blood pressure                      | Multiplication/division       |
+:::
+
+::: {.scrollable style="font-size: 0.7em;"}
+Understanding measurement levels is crucial for selecting appropriate statistical analyses. *A variable can always be reduced to a lower level of measurement* (continuous to categorical), *but not elevated* (categorical to continuous).
+:::
+
+
+## <span class="circle">4</span> <span style="color: teal;">Ecological Studies and Fallacy</span>
+
+::: {.columns}
+::: {.column width="55%"}
+::: {.scrollable style="font-size: 0.85em;"}
+
+- **Unit of analysis:** Group (e.g., city-level data)
+- **Examples:**
+  - Community fluoride levels and dental caries
+  - Countries' smoking rates and lung cancer rates
+- **Ecological fallacy:** Attributing group-level associations to individuals
+- **Example:**
+  - Classrooms with more women had higher average grades
+  - But individual-level analysis showed men had higher grades in each classroom
+:::
+:::
+
+::: {.column width="45%"}
+::: {.scrollable style="font-size: 0.55em;"}
+| Classroom A | Classroom B | Classroom C |
+|-------------|-------------|-------------|
+| F 70        | F 65        | F 65        |
+| F 70        | F 70        | F 70        |
+| F 70        | F 70        | F 80        |
+| F 75        | F 75        | F 80        |
+| F 70        | F 80        | **M 70**    |
+| F 80        | F 85        | **M 75**    |
+| F 80        | **M 80**    | **M 75**    |
+| F 80        | **M 80**    | **M 80**    |
+| **M 95**    | **M 85**    | **M 85**    |
+| **M 100**   | **M 90**    | **M 90**    |
+| Class Mean  |             |             |
+| F 74, M 98, FM: 79 | F 74, M 84, FM: 78 | F 74, M 79, FM: 77 |
+:::
+:::
+:::
+
+---
+
+## <span class="circle">5</span> <span style="color: teal;">Variables and Levels of Measurement</span>
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.scrollable style="font-size: 0.85em;"}
+* **Categorical variables:**
+   * *Dichotomous* (e.g., male/female)
+   * *Polytomous* (e.g., blood type)
+   * *Nominal* (no implied order)
+   * *Ordinal* (ranked, e.g., "good" > "fair")
+* **Continuous variables:**
+   * *Interval scale* (e.g., temperature in Celsius)
+   * *Ratio scale* (e.g., body weight, height)
+
+Note: Continuous variables can be converted to categorical, but not vice versa.
+:::
+:::
+::: {.column width="40%"}
+![](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80)
+:::
+:::
+
+
+---
+
+## <span class="circle">6</span> <span style="color: teal;">Types of Research Design</span>
+
+**Key concepts to distinguish studies:**
+
+- **Purpose**: Descriptive vs. analytical
+- **Investigator control**: Observational vs. interventional
+- **Directionality**: Forward vs. backward
+- **Sample selection**: Based on exposure, disease, or neither
+- **Timing**: Prospective vs. retrospective
+
+**Study Types:**
+- Cross-sectional
+- Case-control
+- Retrospective cohort
+- Prospective cohort
+- Randomized controlled trial (RCT)
+
+
+----
+
+## <span class="circle">7</span> <span style="color: teal;">Basic Terminology: Exposure and Disease</span>
+
+::: {.columns}
+::: {.column width="60%"}
+- **E** = "Exposure"
+  - Risk factor (e.g., smoking, occupational hazard)
+  - Intervention (e.g., drug, prevention program)
+
+- **D** = "Disease" or outcome
+  - Disease, injury, death
+  - Any health-related outcome
+
+- **E₀** and **D₀** = Absence of exposure/disease
+- **E₁** and **D₁** = Presence of exposure/disease
+:::
+
+::: {.column width="40%"}
+![](https://images.unsplash.com/photo-1589279003513-467d320f47eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1335&q=80)
+:::
+:::
+
+::: {.notes}
+This basic E and D framework helps illustrate the logic behind different epidemiological study designs.
+:::
+
+---
+
+## <span class="circle">8</span> <span style="color: teal;">Study Designs Summary</span>
+
+::: {.scrollable style="font-size: 0.65em;"}
+| Study Type              | Purpose              | Control         | Directionality | Sample Selection     | Timing       |
+|-------------------------|----------------------|------------------|----------------|----------------------|--------------|
+| **Cross-sectional**     | Descriptive/Analytical | Observational   | Concurrent     | Representative sample | Retrospective |
+| **Case-control**        | Analytical           | Observational   | Backward       | Based on disease     | Retrospective |
+| **Retrospective cohort**| Analytical           | Observational   | Forward        | Based on exposure    | Retrospective |
+| **Prospective cohort**  | Analytical           | Observational   | Forward        | Based on exposure    | Prospective   |
+| **Randomized control trial** | Analytical     | Interventional  | Forward        | Based on exposure    | Prospective   |
+:::
+
+
+---
+
+## <span class="circle">9</span> <span style="color: teal;">Cross-Sectional Studies</span>
+
+::: {.columns}
+::: {.column width="55%"}
+::: {.scrollable style="font-size: 0.75em;"}
+- Also called **prevalence studies**
+- Exposure and outcome assessed **simultaneously**
+- Can be descriptive or analytical
+- Provides a "snapshot" of a population
+- Relatively quick and inexpensive
+
+**Limitations**:
+
+- Cannot establish temporal sequence
+
+- Only includes survivors of disease
+
+- Not suitable for rare diseases
+:::
+:::
+
+::: {.column width="45%"}
+![](imgs/crossSection.jpg)
+
+*A snapshot in time: both exposure and outcome measured simultaneously*
+:::
+:::
+
+
+---
+
+## <span class="circle">10</span> <span style="color: teal;">In-class exercise</span>
+---
+
+## <span class="circle">11</span> <span style="color: teal;">Case-Control Analysis</span>
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.scrollable style="font-size: 0.8em;"}
+- Cannot directly compute relative risk
+- Use **odds ratio (OR)** as an estimate:
+
+$$OR = \frac{ad}{bc}$$
+
+- In a 2×2 table:
+
+$$
+\begin{array}{|c|c|c|} \hline
+ & D_1 & D_0 \\ \hline
+E_1 & a & b \\ \hline
+E_0 & c & d \\ \hline
+\end{array}
+$$
+
+- When disease is rare, OR ≈ RR
+:::
+:::
+
+
+::: {.column width="40%"}
+::: {.scrollable style="font-size: 0.8em;"}
+![](imgs/caseControl.png)
+
+What is happening here?
+:::
+:::
+:::
+
+---
+
+## <span class="circle">12</span> <span style="color: teal;">Cohort Studies</span>
+
+::: {.columns}
+::: {.column width="55%"}
+- Start with **exposure status** (E₁ and E₀)
+- Follow forward to observe outcome
+- Two types:
+  - **Prospective**: Start now, follow into future
+  - **Retrospective**: Look back at historical exposure
+- Can study multiple outcomes
+- Directly computes incidence and relative risk
+:::
+
+::: {.column width="45%"}
+![](imgs/cohort.jpg)
+
+*Following groups forward from exposure to outcome*
+:::
+:::
+
+
+----
+
+## <span class="circle">13</span> <span style="color: teal;">Cohort Analysis</span>
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.scrollable style="font-size: 0.8em;"}
+- **Relative Risk (RR)** quantifies association between exposure and outcome:
+
+$$RR = \frac{a/(a+b)}{c/(c+d)}$$
+
+- In a 2×2 table:
+
+$$
+\begin{array}{|c|c|c|} \hline
+ & D_1 & D_0 \\ \hline
+E_1 & a & b \\ \hline
+E_0 & c & d \\ \hline
+\end{array}
+$$
+:::
+:::
+::: {.column width="40%"}
+::: {.scrollable style="font-size: 0.8em;"}
+- Allows for:
+  - Direct incidence calculation
+  - Assessment of multiple outcomes
+  - Use with rare exposures
+
+
+
+**Challenges:**
+
+- Time-consuming and costly
+
+- Potential for loss to follow-up
+
+- Not ideal for rare diseases
+
+- Diagnostic changes over time may affect results
+:::
+:::
+:::
+
+---
+
+## <span class="circle">14</span> <span style="color: teal;">Randomized Controlled Trials (RCTs)</span>
+
+::: {.columns}
+::: {.column width="55%"}
+::: {.scrollable style="font-size: 0.8em;"}
+- **Gold standard** for assessing causal relationships
+- Participants randomly allocated to intervention (E₁) or control (E₀)
+- Minimizes confounding and bias through:
+  - Randomization
+  - Blinding (single, double)
+- Can be conducted at individual or group level
+
+:::
+:::
+::: {.column width="45%"}
+::: {.scrollable style="font-size: 0.8em;"}
+
+**Phases of clinical trials:**
+
+- **Phase I:** Safety and dosage (small sample)
+
+- **Phase II:** Effectiveness and side effects
+
+- **Phase III:** Confirm effectiveness, monitor adverse reactions (RCT)
+
+- **Phase IV:** Post-marketing surveillance
+
+*Randomization helps balance known and unknown confounders.*
+:::
+:::
+:::
+
+
+---
+
+
+## <span class="circle">15</span> <span style="color: teal;">Validity and Reliability</span>
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.scrollable style="font-size: 0.8em;"}
+**Measurement Validity**
+
+- **Face validity**: Appears reasonable on the surface
+
+- **Content validity**: Covers full scope of concept
+
+- **Construct validity**: Reflects theoretical concept
+
+- **Criterion validity**: Correlates with external standard
+
+- **Concurrent validity**: Correlates with present condition
+
+- **Predictive validity**: Forecasts future outcome
+:::
+:::
+
+::: {.column width="50%"}
+::: {.scrollable style="font-size: 0.8em;"}
+**Study Validity**
+
+- **Internal validity**: Results valid for study sample
+
+- **External validity**: Results generalize to other populations
+
+**Reliability**
+
+- **Test-retest**: Same test, different times
+
+- **Inter-observer**: Different observers agree
+
+- **Intra-observer**: Same observer consistent over time
+:::
+:::
+:::
+
+---
+
+## <span class="circle">16</span> <span style="color: teal;">Reliability vs. Validity</span>
+
+::: {.columns}
+::: {.column width="60%"}
+- **Reliability** = consistency of measurement
+- **Validity** = accuracy of what is intended to be measured
+- A tool can be reliable but not valid
+- A tool cannot be valid if it is not reliable
+:::
+
+::: {.column width="40%"}
+![Target analogy for validity and reliability](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Reliability_and_validity.svg/1024px-Reliability_and_validity.svg.png)
+:::
+:::
+
+---
+
+## <span class="circle">17</span> <span style="color: teal;">Types of Error</span>
+
+::: {.columns}
+::: {.column width="50%"}
+**Random Error**
+
+- Caused by chance or sampling variation
+
+- Affects **precision**
+
+- Can be reduced by increasing sample size
+
+- Produces unpredictable fluctuations
+:::
+
+::: {.column width="50%"}
+**Systematic Error (Bias)**
+
+- Consistent, repeatable error due to flaws in design or measurement
+
+- Affects **validity**
+
+- Not reduced by increasing sample size
+
+- Must be addressed in study design
+:::
+:::
+
+---
+  
+## <span class="circle">18</span> <span style="color: teal;">Major Types of Bias</span>
+  
+::: {.panel-tabset}
+### Selection Bias
+- Systematic differences between those selected and not selected
+- Examples:
+  - Low response rate
+- Healthy worker effect
+- Volunteer bias
+- Berkson's bias (hospital sampling)
+  - Loss to follow-up
+  - Survivor bias
+
+
+### Information Bias
+- Measurement error or misclassification
+- Examples:
+  - Recall bias
+  - Observer/interviewer bias
+  - Social desirability bias
+  - Instrument bias
+  - Diagnostic suspicion bias
+
+
+### Confounding
+- Third variable distorts exposure-outcome relationship
+- Must be:
+  1. Associated with exposure
+  2. Risk factor for the outcome
+  3. Not an intermediate step in the causal path
+:::
+
+
+
+
+---
+
+## <span class="circle">19</span> <span style="color: teal;">Controlling for Confounding</span>
+
+::: {.columns}
+::: {.column width="50%"}
+**At Design Stage**
+
+1. **Randomization**  
+   - Evenly distributes confounders across groups
+
+2. **Restriction**  
+   - Limit study to specific subgroup
+   
+3. **Matching**  
+   - Pair participants with similar characteristics
+:::
+
+::: {.column width="50%"}
+**At Analysis Stage**
+
+4. **Stratification**  
+   - Analyze within homogeneous strata  
+   - Mantel-Haenszel summary estimate
+
+5. **Multivariable Modeling**  
+   - Include confounders as covariates  
+   - Logistic regression, Cox models
+:::
+:::
+
+
+
+---
+
+## <span class="circle">20</span> <span style="color: teal;">Effect Modification (Interaction)</span>
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.scrollable style="font-size: 0.7em;"}
+- Occurs when the effect of exposure differs across levels of a third variable
+- **Not the same as confounding**
+- Can be additive or multiplicative
+- **Additive Model:**  
+  $$RREM = RRE + RRM - 1$$
+- **Multiplicative Model:**  
+  $$RREM = RRE \times RRM$$
+- Interpretation:
+  - If RREM > expected → **synergism**
+  - If RREM < expected → **antagonism**
+:::
+:::
+
+::: {.column width="40%"}
+**Example:** Asbestos and smoking on lung cancer risk
+![Interaction models](imgs/effectModification.png)
+:::
+:::
+
+
+
+---
+
+
+## <span class="circle">21</span> <span style="color: teal;">Qualitative Methods</span>
+
+::: {.columns}
+::: {.column width="55%"}
+- Originates from the social sciences
+- Explores perceptions, beliefs, experiences
+- Often used to:
+  - Understand lived experiences
+  - Explore context and meaning
+  - Inform survey and tool development
+- **Common techniques:**
+  - In-depth interviews
+  - Focus groups
+  - Participant observation
+  - Document analysis
+:::
+
+::: {.column width="45%"}
+![](https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80)
+
+*Mixed methods combine qualitative insight with quantitative data.*
+:::
+:::
+
+
+
+---
+
+## <span class="circle">22</span> <span style="color: teal;">Types of Qualitative Methods</span>
+
+::: {.panel-tabset}
+### Observation
+- **Participant observation**: Researcher immersed in environment
+- Captures real behavior and interactions
+- Varies in degree of participation
+
+### Interviews
+- **Structured**: Same questions for all
+- **Semi-structured**: Flexible, guided
+- **In-depth**: Deep exploration
+- **Focus groups**: Group discussion dynamics
+
+### Document Analysis
+- Systematic review of written or visual materials
+- Examples:
+  - Public records, policy reports
+  - Personal journals, media, videos
+:::
+
+
+
+
+---
+
+## <span class="circle">23</span> <span style="color: teal;">Integrating Qualitative & Quantitative Methods</span>
+
+::: {.columns}
+::: {.column width="60%"}
+::: {.scrollable style="font-size: 0.7em;"}
+**Ways to integrate qualitative methods:**
+
+1. **Pre-study**: To develop hypotheses or instruments
+
+2. **During study**: To explain unexpected results
+
+3. **Post-study**: To interpret and validate findings
+
+4. **Standalone**: As an alternative or complement to quantitative
+
+**Example: Regional Health Needs Assessment**
+
+- **Quantitative**: Epidemiologic data, service access
+
+- **Qualitative**: Focus groups with residents, interviews with key informants
+:::
+:::
+
+::: {.column width="40%"}
+![](https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80)
+
+*Combining methods gives depth and context.*
+:::
+:::
+
+---
+
+## <span class="circle">24</span> <span style="color: teal;">Ethical Considerations</span>
+
+::: {.columns}
+::: {.column width="50%"}
+**Four Ethical Principles:**
+
+1. **Autonomy** – Respect for individuals
+
+2. **Beneficence** – Maximize benefits
+
+3. **Non-maleficence** – Do no harm
+
+4. **Justice** – Fair treatment and burden distribution
+:::
+
+::: {.column width="50%"}
+**Research Protections:**
+
+- Informed consent
+
+- Confidentiality
+
+- Data security
+
+- Vulnerable populations
+
+- Institutional Review Boards (IRBs)
+
+- Research integrity and transparency
+:::
+:::
+
+---
+
+## <span class="circle">25</span> <span style="color: teal;">Key Takeaways</span>
+
+::: {.columns}
+::: {.column width="60%"}
+- Choose the study design that best answers your research question
+- Recognize and control for bias and confounding
+- Understand the role of validity and reliability
+- Combine methods when appropriate
+- Always prioritize ethics and participant rights
+
+:::
+
+::: {.column width="40%"}
+::: {.scrollable style="font-size: 0.7em;"}
+![](https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80)
+
+> “No method is inherently superior—it all depends on the research question.” – T. Kue Young
+:::
+:::
+:::
+

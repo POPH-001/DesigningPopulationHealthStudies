@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 650" style="enable-background:new 0 0 800 650;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#333333;}
+	.st1{fill:#3498DB;stroke:#2980B9;stroke-width:2;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'Arial-BoldMT';}
+	.st4{font-size:16px;}
+	.st5{fill:#E74C3C;stroke:#C0392B;stroke-width:2;}
+	.st6{font-size:14px;}
+	.st7{fill:#FFFFFF;stroke:#E74C3C;stroke-width:2;}
+	.st8{fill:#333333;}
+	.st9{font-family:'ArialMT';}
+	.st10{font-size:12px;}
+	.st11{fill:#F39C12;stroke:#D35400;stroke-width:2;}
+	.st12{fill:#FFFFFF;stroke:#F39C12;stroke-width:2;}
+	.st13{fill:#2ECC71;stroke:#27AE60;stroke-width:2;}
+	.st14{fill:#FFFFFF;stroke:#2ECC71;stroke-width:2;}
+	.st15{fill:#9B59B6;stroke:#8E44AD;stroke-width:2;}
+	.st16{fill:#FFFFFF;stroke:#9B59B6;stroke-width:2;}
+	.st17{fill:none;stroke:#333333;stroke-width:1.5;}
+	.st18{fill:#FFFFFF;stroke:#BDC3C7;stroke-width:2;}
+	.st19{fill:#E74C3C;}
+	.st20{fill:#F39C12;}
+	.st21{fill:#2ECC71;}
+	.st22{fill:#9B59B6;}
+</style>
+<line class="st0" x1="625" y1="220" x2="580" y2="290"/>
+<line class="st0" x1="625" y1="220" x2="710" y2="290"/>
+<line class="st0" x1="625" y1="220" x2="645" y2="340"/>
+<path class="st0" d="M174.2,221.4C157.8,254.6,9.6,244.6,55.8,373.8"/>
+<path class="st1" d="M305,70h190c2.8,0,5,2.2,5,5v50c0,2.8-2.2,5-5,5H305c-2.8,0-5-2.2-5-5V75C300,72.2,302.2,70,305,70z"/>
+<text transform="matrix(1 0 0 1 344.4336 105)" class="st2 st3 st4">Study Designs</text>
+<path class="st5" d="M105,170h140c2.8,0,5,2.2,5,5v40c0,2.8-2.2,5-5,5H105c-2.8,0-5-2.2-5-5v-40C100,172.2,102.2,170,105,170z"/>
+<text transform="matrix(1 0 0 1 133.8989 200)" class="st2 st3 st6">Study Types</text>
+<path class="st7" d="M25,240h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H25c-2.8,0-5-2.2-5-5v-30C20,242.2,22.2,240,25,240z"/>
+<text transform="matrix(1 0 0 1 38.6533 265)" class="st8 st9 st10">Cross-sectional</text>
+<path class="st7" d="M155,240h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H155c-2.8,0-5-2.2-5-5v-30C150,242.2,152.2,240,155,240z"/>
+<text transform="matrix(1 0 0 1 175.9863 265)" class="st8 st9 st10">Case-control</text>
+<path class="st7" d="M25,290h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H25c-2.8,0-5-2.2-5-5v-30C20,292.2,22.2,290,25,290z"/>
+<text transform="matrix(1 0 0 1 61.9912 315)" class="st8 st9 st10">Cohort</text>
+<path class="st7" d="M155,290h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H155c-2.8,0-5-2.2-5-5v-30C150,292.2,152.2,290,155,290z"/>
+<text transform="matrix(1 0 0 1 177.6387 315)" class="st8 st9 st10">Longitudinal</text>
+<path class="st11" d="M65,360h140c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H65c-2.8,0-5-2.2-5-5v-30C60,362.2,62.2,360,65,360z"/>
+<text transform="matrix(1 0 0 1 79.5093 385)" class="st2 st3 st6">Time Orientation</text>
+<path class="st12" d="M25,410h90c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H25c-2.8,0-5-2.2-5-5v-30C20,412.2,22.2,410,25,410z"/>
+<text transform="matrix(1 0 0 1 38.6523 435)" class="st8 st9 st10">Prospective</text>
+<path class="st12" d="M155,410h90c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5h-90c-2.8,0-5-2.2-5-5v-30C150,412.2,152.2,410,155,410z"/>
+<text transform="matrix(1 0 0 1 163.3174 435)" class="st8 st9 st10">Retrospective</text>
+<path class="st13" d="M330,170h140c2.8,0,5,2.2,5,5v40c0,2.8-2.2,5-5,5H330c-2.8,0-5-2.2-5-5v-40C325,172.2,327.2,170,330,170z"/>
+<text transform="matrix(1 0 0 1 342.0312 200)" class="st2 st3 st6">Quality Measures</text>
+<path class="st14" d="M295,240h90c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5h-90c-2.8,0-5-2.2-5-5v-30C290,242.2,292.2,240,295,240z"/>
+<text transform="matrix(1 0 0 1 321.1035 265)" class="st8 st9 st10">Validity</text>
+<path class="st14" d="M415,240h90c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5h-90c-2.8,0-5-2.2-5-5v-30C410,242.2,412.2,240,415,240z"/>
+<text transform="matrix(1 0 0 1 434.3242 265)" class="st8 st9 st10">Reliability</text>
+<path class="st15" d="M555,170h140c2.8,0,5,2.2,5,5v40c0,2.8-2.2,5-5,5H555c-2.8,0-5-2.2-5-5v-40C550,172.2,552.2,170,555,170z"/>
+<text transform="matrix(1 0 0 1 571.7036 200)" class="st2 st3 st6">Potential Issues</text>
+<path class="st16" d="M525,240h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H525c-2.8,0-5-2.2-5-5v-30C520,242.2,522.2,240,525,240z"/>
+<text transform="matrix(1 0 0 1 545.9717 265)" class="st8 st9 st10">Confounding</text>
+<path class="st16" d="M655,240h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H655c-2.8,0-5-2.2-5-5v-30C650,242.2,652.2,240,655,240z"/>
+<text transform="matrix(1 0 0 1 681.9834 265)" class="st8 st9 st10">Interaction</text>
+<path class="st16" d="M525,290h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H525c-2.8,0-5-2.2-5-5v-30C520,292.2,522.2,290,525,290z"/>
+<text transform="matrix(1 0 0 1 536.6553 315)" class="st8 st9 st10">Misclassification</text>
+<path class="st16" d="M655,290h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H655c-2.8,0-5-2.2-5-5v-30C650,292.2,652.2,290,655,290z"/>
+<text transform="matrix(1 0 0 1 671.9785 315)" class="st8 st9 st10">Selection Bias</text>
+<path class="st16" d="M590,340h110c2.8,0,5,2.2,5,5v30c0,2.8-2.2,5-5,5H590c-2.8,0-5-2.2-5-5v-30C585,342.2,587.2,340,590,340z"/>
+<text transform="matrix(1 0 0 1 601.6494 365)" class="st8 st9 st10">Ecologic Fallacy</text>
+<line class="st17" x1="400" y1="130" x2="175" y2="170"/>
+<line class="st17" x1="400" y1="130" x2="400" y2="170"/>
+<line class="st17" x1="400" y1="130" x2="625" y2="170"/>
+<line class="st0" x1="175" y1="220" x2="80" y2="240"/>
+<line class="st0" x1="175" y1="220" x2="210" y2="240"/>
+<path class="st0" d="M210,290"/>
+<path class="st0" d="M175,220"/>
+<path class="st0" d="M135,360"/>
+<path class="st0" d="M175,220"/>
+<line class="st0" x1="135" y1="400" x2="70" y2="410"/>
+<line class="st0" x1="135" y1="400" x2="200" y2="410"/>
+<line class="st0" x1="400" y1="220" x2="340" y2="240"/>
+<line class="st0" x1="400" y1="220" x2="460" y2="240"/>
+<line class="st0" x1="625" y1="220" x2="580" y2="240"/>
+<line class="st0" x1="625" y1="220" x2="710" y2="240"/>
+<path class="st18" d="M278.5,392.1h280.3c2,0,3.6,1.7,3.6,3.8V449c0,2.1-1.6,3.8-3.6,3.8H278.5c-2,0-3.6-1.7-3.6-3.8v-53.1
+	C274.9,393.8,276.5,392.1,278.5,392.1z"/>
+<rect x="289.4" y="400.9" class="st19" width="14" height="14"/>
+<text transform="matrix(1 0 0 1 314.3863 412.9466)" class="st8 st9 st10">Study Types</text>
+<rect x="289.5" y="429" class="st20" width="14" height="14"/>
+<text transform="matrix(1 0 0 1 314.4618 440.9798)" class="st8 st9 st10">Time Orientation</text>
+<rect x="424.5" y="402" class="st21" width="14" height="14"/>
+<text transform="matrix(1 0 0 1 449.4686 413.9852)" class="st8 st9 st10">Measurement</text>
+<rect x="424.6" y="427.8" class="st22" width="14" height="14"/>
+<text transform="matrix(1 0 0 1 449.6063 439.7565)" class="st8 st9 st10">Threats to Validity</text>
+<path class="st0" d="M172,220.5c-16.4,33.3-200.5-51.6-154.2,77.6"/>
+<path class="st0" d="M174.1,221.4c61.5,23.1,121.8-40.9,96.2,85.8"/>
+</svg>
