@@ -1,6 +1,6 @@
 ---
 title: "Designing Population Health Studies"
-subtitle: "March 31, April 2 2025<br> Eric Delmelle"
+subtitle: "March 31 and April 2 2025<br> Eric Delmelle"
 format: revealjs
 ---
   
