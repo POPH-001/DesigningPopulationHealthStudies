@@ -1,7 +1,10 @@
 ---
 title: "Designing Population Health Studies"
-subtitle: "October 16, October 21 2025<br> Eric Delmelle"
-format: revealjs
+subtitle: "April 6 and April 8<br> Eric Delmelle"
+format:
+  revealjs: 
+    slide-number: true
+  pdf: default
 ---
   
   ```{=html}
