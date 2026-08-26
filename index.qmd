@@ -1,6 +1,5 @@
 ---
 title: "Designing Population Health Studies"
-subtitle: "April 6 and April 8<br> Eric Delmelle"
 format:
   revealjs: 
     slide-number: true

@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,22 +41,32 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -66,23 +78,35 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
 \KOMAoption{captions}{tableheading}
-\makeatletter
-\makeatother
-\makeatletter
-\makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -119,25 +143,14 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
-\makeatother
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Designing Population Health Studies},
   colorlinks=true,
@@ -147,32 +160,20 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
+
 \title{Designing Population Health Studies}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{April 6 and April 8 Eric Delmelle}
 \author{}
 \date{}
-
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, breakable]}{\end{tcolorbox}}\fi
 
-\begin{figure}
 
-{\centering \includegraphics[width=3.40625in,height=\textheight]{imgs/chapter6.png}
+\begin{center}
+\includegraphics[width=3.40625in,height=\textheight,keepaspectratio]{imgs/chapter6.png}
+\end{center}
 
-}
-
-\end{figure}
-
-\hypertarget{chapter-overview}{%
 \section{\texorpdfstring{{Chapter
-Overview}}{Chapter Overview}}\label{chapter-overview}}
+Overview}}{Chapter Overview}}\label{chapter-overview}
 
 \begin{itemize}
 \tightlist
@@ -205,13 +206,11 @@ Overview}}{Chapter Overview}}\label{chapter-overview}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{a-matter-of-measurement}{%
 \subsection{\texorpdfstring{{1} {A Matter of
-Measurement}}{1 A Matter of Measurement}}\label{a-matter-of-measurement}}
+Measurement}}{1 A Matter of Measurement}}\label{a-matter-of-measurement}
 
-\hypertarget{primary-vs.-secondary-data}{%
 \subsubsection{Primary vs.~Secondary
-Data}\label{primary-vs.-secondary-data}}
+Data}\label{primary-vs.-secondary-data}
 
 \textbf{{Primary data}:}\\
 - Data collected specifically for the purpose of the study.
@@ -226,9 +225,8 @@ Data}\label{primary-vs.-secondary-data}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{primary-vs.-secondary-data-1}{%
 \subsection{\texorpdfstring{{2} {Primary vs.~Secondary
-Data}}{2 Primary vs.~Secondary Data}}\label{primary-vs.-secondary-data-1}}
+Data}}{2 Primary vs.~Secondary Data}}\label{primary-vs.-secondary-data-1}
 
 \begin{itemize}
 \tightlist
@@ -258,22 +256,21 @@ Data}}{2 Primary vs.~Secondary Data}}\label{primary-vs.-secondary-data-1}}
   \end{itemize}
 \end{itemize}
 
-\includegraphics{index_files/mediabag/photo-1581091226033-.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/photo-1581091226033-.jpg}}
 
 While primary data offers control and precision, secondary data can save
 time and resources.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{levels-of-measurement}{%
 \subsection{\texorpdfstring{{3} {Levels of
-Measurement}}{3 Levels of Measurement}}\label{levels-of-measurement}}
+Measurement}}{3 Levels of Measurement}}\label{levels-of-measurement}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1129}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2742}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3629}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1129}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2742}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3629}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Level
@@ -303,9 +300,8 @@ statistical analyses. \emph{A variable can always be reduced to a lower
 level of measurement} (continuous to categorical), \emph{but not
 elevated} (categorical to continuous).
 
-\hypertarget{ecological-studies-and-fallacy}{%
 \subsection{\texorpdfstring{{4} {Ecological Studies and
-Fallacy}}{4 Ecological Studies and Fallacy}}\label{ecological-studies-and-fallacy}}
+Fallacy}}{4 Ecological Studies and Fallacy}}\label{ecological-studies-and-fallacy}
 
 \begin{itemize}
 \tightlist
@@ -360,9 +356,8 @@ F 74, M 98, FM: 79 & F 74, M 84, FM: 78 & F 74, M 79, FM: 77 \\
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{variables-and-levels-of-measurement}{%
 \subsection{\texorpdfstring{{5} {Variables and Levels of
-Measurement}}{5 Variables and Levels of Measurement}}\label{variables-and-levels-of-measurement}}
+Measurement}}{5 Variables and Levels of Measurement}}\label{variables-and-levels-of-measurement}
 
 \begin{itemize}
 \tightlist
@@ -395,13 +390,12 @@ Measurement}}{5 Variables and Levels of Measurement}}\label{variables-and-levels
 Note: Continuous variables can be converted to categorical, but not vice
 versa.
 
-\includegraphics{index_files/mediabag/photo-1551288049-beb.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/photo-1551288049-beb.jpg}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{types-of-research-design}{%
 \subsection{\texorpdfstring{{6} {Types of Research
-Design}}{6 Types of Research Design}}\label{types-of-research-design}}
+Design}}{6 Types of Research Design}}\label{types-of-research-design}
 
 \textbf{Key concepts to distinguish studies:}
 
@@ -424,9 +418,8 @@ cohort - Prospective cohort - Randomized controlled trial (RCT)
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{basic-terminology-exposure-and-disease}{%
 \subsection{\texorpdfstring{{7} {Basic Terminology: Exposure and
-Disease}}{7 Basic Terminology: Exposure and Disease}}\label{basic-terminology-exposure-and-disease}}
+Disease}}{7 Basic Terminology: Exposure and Disease}}\label{basic-terminology-exposure-and-disease}
 
 \begin{itemize}
 \tightlist
@@ -456,24 +449,23 @@ Disease}}{7 Basic Terminology: Exposure and Disease}}\label{basic-terminology-ex
   \textbf{E₁} and \textbf{D₁} = Presence of exposure/disease
 \end{itemize}
 
-\includegraphics{index_files/mediabag/photo-1589279003513-.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/photo-1589279003513-.jpg}}
 
 This basic E and D framework helps illustrate the logic behind different
 epidemiological study designs.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{study-designs-summary}{%
 \subsection{\texorpdfstring{{8} {Study Designs
-Summary}}{8 Study Designs Summary}}\label{study-designs-summary}}
+Summary}}{8 Study Designs Summary}}\label{study-designs-summary}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2137}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1880}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1538}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1368}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1880}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1197}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2137}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1880}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1538}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1368}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1880}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1197}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Study Type
@@ -506,9 +498,8 @@ Forward & Based on exposure & Prospective \\
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{cross-sectional-studies}{%
 \subsection{\texorpdfstring{{9} {Cross-Sectional
-Studies}}{9 Cross-Sectional Studies}}\label{cross-sectional-studies}}
+Studies}}{9 Cross-Sectional Studies}}\label{cross-sectional-studies}
 
 \begin{itemize}
 \tightlist
@@ -535,22 +526,18 @@ Studies}}{9 Cross-Sectional Studies}}\label{cross-sectional-studies}}
   Not suitable for rare diseases
 \end{itemize}
 
-\includegraphics{imgs/crossSection.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{imgs/crossSection.jpg}}
 
 \emph{A snapshot in time: both exposure and outcome measured
 simultaneously}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{in-class-exercise}{%
-\subsection{\texorpdfstring{{10} {In-class
-exercise}}{10 In-class exercise}}\label{in-class-exercise}}
+\subsection{\texorpdfstring{\#\# {10} {In-class
+exercise}}{\#\# 10 In-class exercise}}\label{in-class-exercise}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\hypertarget{case-control-analysis}{%
 \subsection{\texorpdfstring{{11} {Case-Control
-Analysis}}{11 Case-Control Analysis}}\label{case-control-analysis}}
+Analysis}}{11 Case-Control Analysis}}\label{case-control-analysis}
 
 \begin{itemize}
 \tightlist
@@ -582,15 +569,14 @@ E_0 & c & d \\ \hline
   When disease is rare, OR ≈ RR
 \end{itemize}
 
-\includegraphics{imgs/caseControl.png}
+\pandocbounded{\includegraphics[keepaspectratio]{imgs/caseControl.png}}
 
 What is happening here?
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{cohort-studies}{%
 \subsection{\texorpdfstring{{12} {Cohort
-Studies}}{12 Cohort Studies}}\label{cohort-studies}}
+Studies}}{12 Cohort Studies}}\label{cohort-studies}
 
 \begin{itemize}
 \tightlist
@@ -614,15 +600,14 @@ Studies}}{12 Cohort Studies}}\label{cohort-studies}}
   Directly computes incidence and relative risk
 \end{itemize}
 
-\includegraphics{imgs/cohort.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{imgs/cohort.jpg}}
 
 \emph{Following groups forward from exposure to outcome}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{cohort-analysis}{%
 \subsection{\texorpdfstring{{13} {Cohort
-Analysis}}{13 Cohort Analysis}}\label{cohort-analysis}}
+Analysis}}{13 Cohort Analysis}}\label{cohort-analysis}
 
 \begin{itemize}
 \tightlist
@@ -678,9 +663,8 @@ E_0 & c & d \\ \hline
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{randomized-controlled-trials-rcts}{%
 \subsection{\texorpdfstring{{14} {Randomized Controlled Trials
-(RCTs)}}{14 Randomized Controlled Trials (RCTs)}}\label{randomized-controlled-trials-rcts}}
+(RCTs)}}{14 Randomized Controlled Trials (RCTs)}}\label{randomized-controlled-trials-rcts}
 
 \begin{itemize}
 \tightlist
@@ -720,9 +704,8 @@ E_0 & c & d \\ \hline
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{validity-and-reliability}{%
 \subsection{\texorpdfstring{{15} {Validity and
-Reliability}}{15 Validity and Reliability}}\label{validity-and-reliability}}
+Reliability}}{15 Validity and Reliability}}\label{validity-and-reliability}
 
 \textbf{Measurement Validity}
 
@@ -763,9 +746,8 @@ Reliability}}{15 Validity and Reliability}}\label{validity-and-reliability}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{reliability-vs.-validity}{%
 \subsection{\texorpdfstring{{16} {Reliability
-vs.~Validity}}{16 Reliability vs.~Validity}}\label{reliability-vs.-validity}}
+vs.~Validity}}{16 Reliability vs.~Validity}}\label{reliability-vs.-validity}
 
 \begin{itemize}
 \tightlist
@@ -779,21 +761,20 @@ vs.~Validity}}{16 Reliability vs.~Validity}}\label{reliability-vs.-validity}}
   A tool cannot be valid if it is not reliable
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[H]
 
-{\centering \includegraphics{index_files/mediabag/1024px-Reliability_a.png}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/1024px-Reliability_a.png}}
 
 }
 
 \caption{Target analogy for validity and reliability}
 
-\end{figure}
+\end{figure}%
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{types-of-error}{%
 \subsection{\texorpdfstring{{17} {Types of
-Error}}{17 Types of Error}}\label{types-of-error}}
+Error}}{17 Types of Error}}\label{types-of-error}
 
 \textbf{Random Error}
 
@@ -823,9 +804,8 @@ Error}}{17 Types of Error}}\label{types-of-error}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{major-types-of-bias}{%
 \subsection{\texorpdfstring{{18} {Major Types of
-Bias}}{18 Major Types of Bias}}\label{major-types-of-bias}}
+Bias}}{18 Major Types of Bias}}\label{major-types-of-bias}
 
 \subsubsection{Selection Bias}
 
@@ -904,9 +884,8 @@ Bias}}{18 Major Types of Bias}}\label{major-types-of-bias}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{controlling-for-confounding}{%
 \subsection{\texorpdfstring{{19} {Controlling for
-Confounding}}{19 Controlling for Confounding}}\label{controlling-for-confounding}}
+Confounding}}{19 Controlling for Confounding}}\label{controlling-for-confounding}
 
 \textbf{At Design Stage}
 
@@ -969,9 +948,8 @@ Confounding}}{19 Controlling for Confounding}}\label{controlling-for-confounding
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{effect-modification-interaction}{%
 \subsection{\texorpdfstring{{20} {Effect Modification
-(Interaction)}}{20 Effect Modification (Interaction)}}\label{effect-modification-interaction}}
+(Interaction)}}{20 Effect Modification (Interaction)}}\label{effect-modification-interaction}
 
 \begin{itemize}
 \tightlist
@@ -1001,13 +979,12 @@ Confounding}}{19 Controlling for Confounding}}\label{controlling-for-confounding
 \end{itemize}
 
 \textbf{Example:} Asbestos and smoking on lung cancer risk
-\includegraphics{imgs/effectModification.png}
+\pandocbounded{\includegraphics[keepaspectratio]{imgs/effectModification.png}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{qualitative-methods}{%
 \subsection{\texorpdfstring{{21} {Qualitative
-Methods}}{21 Qualitative Methods}}\label{qualitative-methods}}
+Methods}}{21 Qualitative Methods}}\label{qualitative-methods}
 
 \begin{itemize}
 \tightlist
@@ -1043,15 +1020,14 @@ Methods}}{21 Qualitative Methods}}\label{qualitative-methods}}
   \end{itemize}
 \end{itemize}
 
-\includegraphics{index_files/mediabag/photo-1552664730-d30.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/photo-1552664730-d30.jpg}}
 
 \emph{Mixed methods combine qualitative insight with quantitative data.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{types-of-qualitative-methods}{%
 \subsection{\texorpdfstring{{22} {Types of Qualitative
-Methods}}{22 Types of Qualitative Methods}}\label{types-of-qualitative-methods}}
+Methods}}{22 Types of Qualitative Methods}}\label{types-of-qualitative-methods}
 
 \subsubsection{Observation}
 
@@ -1099,10 +1075,9 @@ Methods}}{22 Types of Qualitative Methods}}\label{types-of-qualitative-methods}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{integrating-qualitative-quantitative-methods}{%
 \subsection{\texorpdfstring{{23} {Integrating Qualitative \&
 Quantitative
-Methods}}{23 Integrating Qualitative \& Quantitative Methods}}\label{integrating-qualitative-quantitative-methods}}
+Methods}}{23 Integrating Qualitative \& Quantitative Methods}}\label{integrating-qualitative-quantitative-methods}
 
 \textbf{Ways to integrate qualitative methods:}
 
@@ -1128,15 +1103,14 @@ Methods}}{23 Integrating Qualitative \& Quantitative Methods}}\label{integrating
   informants
 \end{itemize}
 
-\includegraphics{index_files/mediabag/photo-1544027993-37d.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/photo-1544027993-37d.jpg}}
 
 \emph{Combining methods gives depth and context.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{ethical-considerations}{%
 \subsection{\texorpdfstring{{24} {Ethical
-Considerations}}{24 Ethical Considerations}}\label{ethical-considerations}}
+Considerations}}{24 Ethical Considerations}}\label{ethical-considerations}
 
 \textbf{Four Ethical Principles:}
 
@@ -1171,9 +1145,8 @@ Considerations}}{24 Ethical Considerations}}\label{ethical-considerations}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{key-takeaways}{%
 \subsection{\texorpdfstring{{25} {Key
-Takeaways}}{25 Key Takeaways}}\label{key-takeaways}}
+Takeaways}}{25 Key Takeaways}}\label{key-takeaways}
 
 \begin{itemize}
 \tightlist
@@ -1189,12 +1162,13 @@ Takeaways}}{25 Key Takeaways}}\label{key-takeaways}}
   Always prioritize ethics and participant rights
 \end{itemize}
 
-\includegraphics{index_files/mediabag/photo-1517245386807-.jpg}
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/photo-1517245386807-.jpg}}
 
 \begin{quote}
 ``No method is inherently superior---it all depends on the research
 question.'' -- T. Kue Young
 \end{quote}
+
 
 
 

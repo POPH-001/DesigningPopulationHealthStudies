@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    port: 3333
+  resources:
+    - files/
+
+website:
+  title: "Population Health"
+ 
