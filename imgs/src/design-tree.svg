@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="960" height="500" fill="#FFFFFF"/>
+<defs>
+<marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#008080"/></marker>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker>
+</defs>
+<rect x="20" y="215" width="215" height="90" rx="10" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
+<text x="127.5" y="254.12" font-size="16" font-weight="600" font-style="normal" fill="#1F2937" text-anchor="middle">Did the investigator</text>
+<text x="127.5" y="276.12" font-size="16" font-weight="600" font-style="normal" fill="#1F2937" text-anchor="middle">assign the exposure?</text>
+<rect x="300" y="95" width="180" height="50" rx="10" fill="#008080" stroke="#008080" stroke-width="2"/>
+<text x="390.0" y="125.76" font-size="18" font-weight="700" font-style="normal" fill="#FFFFFF" text-anchor="middle">Experimental</text>
+<rect x="300" y="375" width="180" height="50" rx="10" fill="#008080" stroke="#008080" stroke-width="2"/>
+<text x="390.0" y="405.76" font-size="18" font-weight="700" font-style="normal" fill="#FFFFFF" text-anchor="middle">Observational</text>
+<path d="M235,260 H265 V120 H298" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<path d="M265,260 V400 H298" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<text x="272" y="185" font-size="15" font-weight="700" font-style="normal" fill="#008080" text-anchor="start">Yes</text>
+<text x="272" y="345" font-size="15" font-weight="700" font-style="normal" fill="#008080" text-anchor="start">No</text>
+<rect x="525" y="95" width="165" height="50" rx="10" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
+<text x="607.5" y="124.8" font-size="15" font-weight="600" font-style="normal" fill="#1F2937" text-anchor="middle">Random allocation?</text>
+<line x1="480" y1="120" x2="523" y2="120" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<rect x="740" y="40" width="200" height="58" rx="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="2.5"/>
+<text x="840.0" y="63.3" font-size="15" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Randomized controlled</text>
+<text x="840.0" y="84.3" font-size="15" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">trial (RCT)</text>
+<rect x="740" y="145" width="200" height="50" rx="10" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="840.0" y="174.8" font-size="15" font-weight="500" font-style="normal" fill="#6B7280" text-anchor="middle">Non-randomized trial</text>
+<path d="M690,120 H715 V69 H738" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<path d="M715,120 V170 H738" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<text x="709" y="92" font-size="13" font-weight="700" font-style="normal" fill="#008080" text-anchor="end">Yes</text>
+<text x="709" y="155" font-size="13" font-weight="700" font-style="normal" fill="#008080" text-anchor="end">No</text>
+<rect x="525" y="375" width="165" height="50" rx="10" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
+<text x="607.5" y="404.8" font-size="15" font-weight="600" font-style="normal" fill="#1F2937" text-anchor="middle">Comparison group?</text>
+<line x1="480" y1="400" x2="523" y2="400" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<rect x="740" y="248" width="200" height="50" rx="10" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="840.0" y="268.3" font-size="15" font-weight="600" font-style="normal" fill="#6B7280" text-anchor="middle">Descriptive study</text>
+<text x="840.0" y="287.66" font-size="13" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="middle">e.g., case series</text>
+<path d="M607,375 V273 H738" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<text x="615" y="330" font-size="13" font-weight="700" font-style="normal" fill="#008080" text-anchor="start">No</text>
+<rect x="740" y="312" width="200" height="50" rx="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="2.5"/>
+<text x="840.0" y="332.62" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Cohort</text>
+<text x="840.0" y="352.16" font-size="13" font-weight="400" font-style="italic" fill="#1F2937" text-anchor="middle">exposure → outcome</text>
+<rect x="740" y="374" width="200" height="50" rx="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="2.5"/>
+<text x="840.0" y="394.62" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Case-control</text>
+<text x="840.0" y="414.16" font-size="13" font-weight="400" font-style="italic" fill="#1F2937" text-anchor="middle">outcome → exposure</text>
+<rect x="740" y="436" width="200" height="50" rx="10" fill="#FFFFFF" stroke="#1F2937" stroke-width="2.5"/>
+<text x="840.0" y="456.62" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Cross-sectional</text>
+<text x="840.0" y="476.16" font-size="13" font-weight="400" font-style="italic" fill="#1F2937" text-anchor="middle">both at the same time</text>
+<path d="M690,400 H715 V337 H738" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<path d="M715,400 H738" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<path d="M715,400 V461 H738" fill="none" stroke="#008080" stroke-width="2" marker-end="url(#ah-teal)"/>
+<text x="700" y="448" font-size="13" font-weight="700" font-style="normal" fill="#008080" text-anchor="end">Yes</text>
+<text x="700" y="466" font-size="11" font-weight="400" font-style="normal" fill="#008080" text-anchor="end">(analytical)</text>
+</svg>

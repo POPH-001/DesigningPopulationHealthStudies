@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "index.html#today",
+    "href": "index.html#today",
+    "title": "Designing Population Health Studies",
+    "section": "Today",
+    "text": "Today\nBy the end of this class, you should be able to:\n\nClassify a study by how participants are selected and how time is handled\nCompute and interpret a relative risk (RR) and an odds ratio (OR)\nDistinguish random error, bias, confounding, and effect modification\nExplain what qualitative methods and research ethics add to a study design\n\n\nEvery design answers the same question: is an exposure associated with a health outcome? They differ in where the investigator starts."
+  },
+  {
+    "objectID": "index.html#the-ed-framework",
+    "href": "index.html#the-ed-framework",
+    "title": "Designing Population Health Studies",
+    "section": "The E–D framework",
+    "text": "The E–D framework\n\n\n\nExposure (\\(E\\)): a risk factor (smoking, air pollution) or an intervention (a vaccine, a program)\nDisease (\\(D\\)): any health outcome — illness, injury, death\n\\(E_1\\) / \\(E_0\\) = exposed / unexposed\n\\(D_1\\) / \\(D_0\\) = with / without the outcome\n\n\n\n\n\n\n\\(D_1\\) (disease)\n\\(D_0\\) (no disease)\n\n\n\n\n\\(E_1\\) (exposed)\n\\(a\\)\n\\(b\\)\n\n\n\\(E_0\\) (unexposed)\n\\(c\\)\n\\(d\\)\n\n\n\nThis 2×2 table returns in every design.\n\n\nThe designs differ in which margin the investigator fixes first: the rows (exposure, cohort and RCT), the columns (disease, case-control), or neither (cross-sectional)."
+  },
+  {
+    "objectID": "index.html#classifying-study-designs",
+    "href": "index.html#classifying-study-designs",
+    "title": "Designing Population Health Studies",
+    "section": "Classifying study designs",
+    "text": "Classifying study designs\n\n\nWalk the tree with one question: does air pollution cause asthma? Can we assign pollution? No — observational. Do we have a comparison group? Yes — analytical. Then: start from exposure (cohort), from disease (case-control), or measure both at once (cross-sectional). Greyed boxes exist but are not covered today."
+  },
+  {
+    "objectID": "index.html#cross-sectional-studies",
+    "href": "index.html#cross-sectional-studies",
+    "title": "Designing Population Health Studies",
+    "section": "Cross-sectional studies",
+    "text": "Cross-sectional studies\n\n\n\nExposure and outcome measured at the same time\nAlso called prevalence studies\nQuick and relatively inexpensive (e.g., national health surveys)\n\nLimitations\n\nCannot tell whether \\(E\\) came before \\(D\\)\nCaptures existing cases, which over-represents long-lasting disease\nToo few cases of rare diseases\n\n\n\n\n\nExample: NHANES or BRFSS. The temporality problem is the key point — does depression lead to poor sleep, or poor sleep to depression? A snapshot cannot say."
+  },
+  {
+    "objectID": "index.html#case-control-studies",
+    "href": "index.html#case-control-studies",
+    "title": "Designing Population Health Studies",
+    "section": "Case-control studies",
+    "text": "Case-control studies\n\n\n\nSelect cases (\\(D_1\\)) and comparable controls (\\(D_0\\)), then look back at exposure\nEfficient for rare diseases and long latency\n\nLimitations\n\nExposure recalled after diagnosis → recall bias\nComparable controls are hard to find\nNo incidence, so no RR → odds ratio\n\n\n\n\n\nClassic example: Doll and Hill (1950), lung cancer patients vs. other hospital patients, asked about smoking history. Controls should come from the same population that produced the cases."
+  },
+  {
+    "objectID": "index.html#cohort-studies",
+    "href": "index.html#cohort-studies",
+    "title": "Designing Population Health Studies",
+    "section": "Cohort studies",
+    "text": "Cohort studies\n\n\n\nStart from exposure status; everyone free of the disease at baseline\nFollow both groups forward and count new cases\nProspective: starts now, follows into the future\nRetrospective: uses existing records\n\nStrengths: incidence and RR directly; several outcomes; rare exposures\nLimitations: slow and costly; loss to follow-up; inefficient for rare diseases\n\n\n\n\nExample: the Framingham Heart Study (since 1948). Prospective and retrospective cohorts share the same logic — exposure first, outcome later — and differ only in when the investigator arrives. Long follow-up also means diagnostic criteria may change along the way."
+  },
+  {
+    "objectID": "index.html#randomized-controlled-trials-rcts",
+    "href": "index.html#randomized-controlled-trials-rcts",
+    "title": "Designing Population Health Studies",
+    "section": "Randomized controlled trials (RCTs)",
+    "text": "Randomized controlled trials (RCTs)\n\n\n\nThe investigator assigns the exposure at random\nRandomization balances confounders, known and unknown\nBlinding limits information bias\nIndividuals or groups (schools, villages) can be randomized\nStrongest design for causal inference, but not always ethical or feasible\n\n\n\n\nDrug trials run in phases: I safety and dose · II efficacy and side effects · III large RCT against standard care · IV post-marketing surveillance\n\nWhy not always an RCT? We cannot randomize people to smoke. Optional story: observational studies suggested hormone replacement therapy protected women against heart disease; the Women’s Health Initiative trial (2002) found the opposite for estrogen plus progestin. Women who chose HRT were healthier to begin with — confounding that randomization removed."
+  },
+  {
+    "objectID": "index.html#designs-at-a-glance",
+    "href": "index.html#designs-at-a-glance",
+    "title": "Designing Population Health Studies",
+    "section": "Designs at a glance",
+    "text": "Designs at a glance\n\n\n\n\n\n\n\n\n\n\nDesign\nInvestigator\nSelected on\nDirection\nTiming\n\n\n\n\nCross-sectional\nObserves\nNeither (representative sample)\nNone: \\(E\\) and \\(D\\) together\nOne point in time\n\n\nCase-control\nObserves\nDisease\nBackward (\\(D \\to E\\))\nUsually retrospective\n\n\nRetrospective cohort\nObserves\nExposure\nForward (\\(E \\to D\\))\nRetrospective\n\n\nProspective cohort\nObserves\nExposure\nForward (\\(E \\to D\\))\nProspective\n\n\nRCT\nIntervenes\nExposure, assigned at random\nForward (\\(E \\to D\\))\nProspective\n\n\n\n\nNo design is best in general. The right one depends on the question, the disease, and the time and money available."
+  },
+  {
+    "objectID": "index.html#which-design-is-it",
+    "href": "index.html#which-design-is-it",
+    "title": "Designing Population Health Studies",
+    "section": "Which design is it?",
+    "text": "Which design is it?\n\n\nPast pesticide exposure is compared between 150 children with leukemia and 300 children without. → case-control\n5,000 adults complete one survey on their sleep and their mood. → cross-sectional\nSmoking is recorded for 10,000 nurses, who are then followed for 20 years for heart disease. → prospective cohort\nSchools are randomly assigned to a new physical-activity program or to the usual curriculum. → RCT (cluster)\n\n\n\nGive 30 seconds per item; ask for a show of hands before revealing. For item 1, ask why a cohort would be impractical (childhood leukemia is rare)."
+  },
+  {
+    "objectID": "index.html#measuring-association-rr-and-or",
+    "href": "index.html#measuring-association-rr-and-or",
+    "title": "Designing Population Health Studies",
+    "section": "Measuring association: RR and OR",
+    "text": "Measuring association: RR and OR\n\n\n\n\n\n\n\\(D_1\\)\n\\(D_0\\)\nTotal\n\n\n\n\n\\(E_1\\)\n\\(a\\)\n\\(b\\)\n\\(a + b\\)\n\n\n\\(E_0\\)\n\\(c\\)\n\\(d\\)\n\\(c + d\\)\n\n\n\n\nReading RR or OR\n= 1: no association\n&gt; 1: exposure linked to higher risk\n&lt; 1: exposure linked to lower risk\n\n\nRelative risk — cohort studies and RCTs\n\\[RR = \\frac{a/(a+b)}{c/(c+d)}\\]\nOdds ratio — case-control studies\n\\[OR = \\frac{a \\times d}{b \\times c}\\]\nThe investigator fixes the numbers of cases and controls, so risk cannot be computed; the OR stands in for the RR."
+  },
+  {
+    "objectID": "index.html#worked-example-one-table-two-measures",
+    "href": "index.html#worked-example-one-table-two-measures",
+    "title": "Designing Population Health Studies",
+    "section": "Worked example: one table, two measures",
+    "text": "Worked example: one table, two measures\n\n\nRare outcome (3% vs. 1%)\n\n\n\n\n\\(D_1\\)\n\\(D_0\\)\nTotal\n\n\n\n\n\\(E_1\\)\n30\n970\n1,000\n\n\n\\(E_0\\)\n10\n990\n1,000\n\n\n\n\n\\(RR = \\dfrac{30/1000}{10/1000} = 3.0\\)\n\\(OR = \\dfrac{30 \\times 990}{970 \\times 10} \\approx 3.1\\)\n\n\nCommon outcome (40% vs. 20%)\n\n\n\n\n\\(D_1\\)\n\\(D_0\\)\nTotal\n\n\n\n\n\\(E_1\\)\n400\n600\n1,000\n\n\n\\(E_0\\)\n200\n800\n1,000\n\n\n\n\n\\(RR = \\dfrac{400/1000}{200/1000} = 2.0\\)\n\\(OR = \\dfrac{400 \\times 800}{600 \\times 200} \\approx 2.7\\)\n\n\n\nWhen the outcome is rare, OR ≈ RR. When it is common, the OR exaggerates the association.\n\n\nHave students compute both measures for the left table before revealing. Then ask them to predict whether the gap will be larger or smaller on the right."
+  },
+  {
+    "objectID": "index.html#error-reliability-and-validity",
+    "href": "index.html#error-reliability-and-validity",
+    "title": "Designing Population Health Studies",
+    "section": "Error, reliability, and validity",
+    "text": "Error, reliability, and validity\n\n\nRandom error — chance variation\n\nScatters results → lowers reliability\nShrinks as the sample grows\n\nSystematic error (bias) — a consistent shift\n\nPushes results off target → lowers validity\nDoes not shrink with sample size\n\n\n\n\n\nStudy validity: internal — correct for the people studied; external — generalizes to other populations.\n\n\nReliability can be checked as test–retest (same test, different times) and inter- or intra-observer agreement. Types of measurement validity (face, content, construct, criterion) are in the chapter for reference; not examined."
+  },
+  {
+    "objectID": "index.html#bias-two-main-families",
+    "href": "index.html#bias-two-main-families",
+    "title": "Designing Population Health Studies",
+    "section": "Bias: two main families",
+    "text": "Bias: two main families\nBias is systematic error introduced by who ends up in the study or how information is collected.\n\nSelection biasInformation bias\n\n\n\nHealthy worker effect: workers are healthier than the general population\nVolunteer bias: volunteers differ from non-volunteers\nBerkson’s bias: hospital-based samples distort associations\nLoss to follow-up: those who drop out differ from those who stay\n\n\n\n\nRecall bias: cases remember past exposures differently from controls\nInterviewer bias: knowing who is a case changes how questions are asked\nSocial desirability bias: under-reporting of stigmatized behaviors\nMisclassification: imperfect tests or records place people in the wrong group"
+  },
+  {
+    "objectID": "index.html#confounding",
+    "href": "index.html#confounding",
+    "title": "Designing Population Health Studies",
+    "section": "Confounding",
+    "text": "Confounding\n\n\n\nA confounder is (1) associated with the exposure, (2) a cause of the outcome, and (3) not a step on the path between them.\n\nAt the design stage\n\nRandomization — balances all confounders\nRestriction — study non-smokers only\nMatching — pair participants on smoking\n\nAt the analysis stage\n\nStratification — analyze smokers and non-smokers separately\nRegression — adjust for several at once\n\n\n\nAsk first: coffee drinkers have more lung cancer — does coffee cause lung cancer? Let students propose the third variable before showing the diagram."
+  },
+  {
+    "objectID": "index.html#effect-modification",
+    "href": "index.html#effect-modification",
+    "title": "Designing Population Health Studies",
+    "section": "Effect modification",
+    "text": "Effect modification\n\nThe effect of an exposure depends on the level of a third variable\nUnlike confounding, it is not a bias to remove — it is a finding to report\n\nLung cancer deaths per 100,000 person-years\n\n\n\n\nNon-smoker\nSmoker\n\n\n\n\nNo asbestos\n11  (RR = 1)\n123  (RR ≈ 11)\n\n\nAsbestos\n58  (RR ≈ 5)\n602  (RR ≈ 53)\n\n\n\n\nIf the two effects simply added up, we would expect RR ≈ 15. The observed RR ≈ 53: the exposures act in synergy.\n\nInsulation workers vs. a comparison group of men; Hammond, Selikoff & Seidman (1979)\n\nAdditive expectation: RR(A) + RR(S) − 1 = 5 + 11 − 1 = 15. Multiplicative expectation: 5 × 11 = 55, close to the observed 53. Keep the formulas off the slide; the point is that the joint effect is far larger than either alone. The opposite pattern is called antagonism."
+  },
+  {
+    "objectID": "index.html#qualitative-and-mixed-methods",
+    "href": "index.html#qualitative-and-mixed-methods",
+    "title": "Designing Population Health Studies",
+    "section": "Qualitative and mixed methods",
+    "text": "Qualitative and mixed methods\n\n\nExplore perceptions, beliefs, and lived experience — the why and how behind the numbers.\n\nInterviews: structured, semi-structured, or in-depth\nFocus groups: guided discussion in small groups\nParticipant observation: researcher immersed in the setting\nDocument analysis: policies, records, media\n\n\nCombining with quantitative methods\n\nBefore: develop hypotheses and survey questions\nDuring: explain unexpected results\nAfter: interpret and validate findings\n\n\nExample: a regional health needs assessment pairs disease rates and service data with resident focus groups and interviews with community leaders."
+  },
+  {
+    "objectID": "index.html#ethics-in-population-health-research",
+    "href": "index.html#ethics-in-population-health-research",
+    "title": "Designing Population Health Studies",
+    "section": "Ethics in population health research",
+    "text": "Ethics in population health research\n\n\nFour principles\n\nAutonomy — respect people’s right to decide\nBeneficence — maximize benefits\nNon-maleficence — do no harm\nJustice — share burdens and benefits fairly\n\n\nIn practice\n\nInformed consent\nConfidentiality and data security\nExtra protection for vulnerable groups\nReview by an Institutional Review Board (IRB)\nTransparent, honest reporting\n\n\n\nWhy these rules exist: the US Public Health Service syphilis study at Tuskegee (1932–1972) withheld treatment from Black men for decades. It led to the National Research Act (1974), which formalized IRBs, and the Belmont Report (1979)."
+  },
+  {
+    "objectID": "index.html#key-takeaways",
+    "href": "index.html#key-takeaways",
+    "title": "Designing Population Health Studies",
+    "section": "Key takeaways",
+    "text": "Key takeaways\n\nWhere the investigator starts — exposure, disease, or neither — defines the design\nCohorts and RCTs give the RR; case-control studies give the OR, which approximates the RR for rare outcomes\nRandom error shrinks with sample size; bias does not\nControl confounding by design (randomization, restriction, matching) or by analysis (stratification, regression)\nQualitative methods add context; ethics apply at every step\n\n\nOne sentence for the exam: the research question chooses the design, and every design must be checked for bias, confounding, and ethics."
+  }
+]

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 460" width="620" height="460" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="620" height="460" fill="#FFFFFF"/>
+<defs>
+<marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#008080"/></marker>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker>
+</defs>
+<text x="110" y="28" font-size="16" font-weight="700" font-style="normal" fill="#6B7280" text-anchor="middle">Past exposure</text>
+<text x="510" y="28" font-size="16" font-weight="700" font-style="normal" fill="#6B7280" text-anchor="middle">Chosen now, by disease</text>
+<rect x="410" y="45" width="200" height="118" rx="10" fill="#374151" stroke="#374151" stroke-width="2"/>
+<text x="510.0" y="101.04" font-size="22" font-weight="700" font-style="normal" fill="#FFFFFF" text-anchor="middle">Cases</text>
+<text x="510.0" y="122.48" font-size="14" font-weight="400" font-style="italic" fill="#FFFFFF" text-anchor="middle">have the disease (D₁)</text>
+<rect x="410" y="225" width="200" height="118" rx="10" fill="#FFFFFF" stroke="#374151" stroke-width="2"/>
+<text x="510.0" y="281.04" font-size="22" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Controls</text>
+<text x="510.0" y="302.48" font-size="14" font-weight="400" font-style="italic" fill="#1F2937" text-anchor="middle">do not (D₀)</text>
+<rect x="10" y="45" width="200" height="50" rx="10" fill="#F6E7E7" stroke="#7F1D1D" stroke-width="2"/>
+<text x="110.0" y="75.12" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Exposed (E₁)</text>
+<rect x="10" y="113" width="200" height="50" rx="10" fill="#E3EFF4" stroke="#1F6F8B" stroke-width="2"/>
+<text x="110.0" y="143.12" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Unexposed (E₀)</text>
+<rect x="10" y="225" width="200" height="50" rx="10" fill="#F6E7E7" stroke="#7F1D1D" stroke-width="2"/>
+<text x="110.0" y="255.12" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Exposed (E₁)</text>
+<rect x="10" y="293" width="200" height="50" rx="10" fill="#E3EFF4" stroke="#1F6F8B" stroke-width="2"/>
+<text x="110.0" y="323.12" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Unexposed (E₀)</text>
+<line x1="408" y1="104" x2="213" y2="70" stroke="#008080" stroke-width="2.5" marker-end="url(#ah-teal)"/>
+<line x1="408" y1="104" x2="213" y2="138" stroke="#008080" stroke-width="2.5" marker-end="url(#ah-teal)"/>
+<line x1="408" y1="284" x2="213" y2="250" stroke="#008080" stroke-width="2.5" marker-end="url(#ah-teal)"/>
+<line x1="408" y1="284" x2="213" y2="318" stroke="#008080" stroke-width="2.5" marker-end="url(#ah-teal)"/>
+<text x="310" y="188" font-size="15" font-weight="700" font-style="italic" fill="#008080" text-anchor="middle">Look back: were</text>
+<text x="310" y="207" font-size="15" font-weight="700" font-style="italic" fill="#008080" text-anchor="middle">they exposed?</text>
+<line x1="10" y1="390" x2="610" y2="390" stroke="#6B7280" stroke-width="2" marker-end="url(#ah-grey)"/>
+<text x="610" y="380" font-size="15" font-weight="600" font-style="normal" fill="#6B7280" text-anchor="end">Time</text>
+<path d="M510,394 l-8,14 h16 z" fill="#008080"/>
+<text x="510" y="428" font-size="15" font-weight="600" font-style="normal" fill="#008080" text-anchor="middle">Study starts here</text>
+<text x="510" y="447" font-size="15" font-weight="400" font-style="normal" fill="#6B7280" text-anchor="middle">with cases and controls</text>
+</svg>

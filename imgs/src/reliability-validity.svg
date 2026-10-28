@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 505" width="560" height="505" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="560" height="505" fill="#FFFFFF"/>
+<defs>
+<marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#008080"/></marker>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker>
+</defs>
+<circle cx="140" cy="100" r="85" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="100" r="68" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="100" r="51" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="100" r="34" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="100" r="17" fill="#008080"/>
+<circle cx="166.4" cy="83.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="167.0" cy="65.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="151.5" cy="67.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="196.5" cy="81.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="194.8" cy="77.5" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="180.7" cy="76.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="135.3" cy="90.8" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="183.1" cy="83.0" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="134.8" cy="33.6" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="152.4" cy="61.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="178.7" cy="71.0" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="183.5" cy="57.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="178.8" cy="80.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="157.5" cy="109.8" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<text x="140" y="212" font-size="17" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Low reliability, low validity</text>
+<text x="140" y="233" font-size="14" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="middle">scattered and off-center</text>
+<circle cx="420" cy="100" r="85" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="100" r="68" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="100" r="51" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="100" r="34" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="100" r="17" fill="#008080"/>
+<circle cx="433.9" cy="129.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="404.5" cy="81.5" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="411.4" cy="97.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="435.8" cy="106.2" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="408.8" cy="76.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="407.0" cy="130.5" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="399.8" cy="106.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="430.7" cy="62.8" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="421.2" cy="132.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="369.6" cy="92.0" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="417.3" cy="79.6" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="432.4" cy="98.4" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="383.4" cy="120.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="436.7" cy="123.6" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<text x="420" y="212" font-size="17" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Low reliability</text>
+<text x="420" y="233" font-size="14" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="middle">centered on average, but scattered</text>
+<circle cx="140" cy="360" r="85" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="360" r="68" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="360" r="51" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="360" r="34" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="140" cy="360" r="17" fill="#008080"/>
+<circle cx="182.6" cy="334.2" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="174.7" cy="324.2" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="177.7" cy="328.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="171.3" cy="324.4" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="168.2" cy="328.8" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="181.7" cy="319.8" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="165.3" cy="333.4" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="182.7" cy="335.5" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="162.6" cy="316.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="176.1" cy="327.6" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="167.3" cy="337.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="180.6" cy="332.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="175.5" cy="334.6" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="183.6" cy="335.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<text x="140" y="472" font-size="17" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">High reliability, low validity</text>
+<text x="140" y="493" font-size="14" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="middle">consistently off target: bias</text>
+<circle cx="420" cy="360" r="85" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="360" r="68" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="360" r="51" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="360" r="34" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<circle cx="420" cy="360" r="17" fill="#008080"/>
+<circle cx="423.1" cy="363.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="410.6" cy="367.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="425.7" cy="363.2" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="408.2" cy="356.2" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="425.1" cy="349.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="418.9" cy="366.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="412.1" cy="369.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="423.3" cy="359.1" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="421.9" cy="363.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="420.7" cy="366.9" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="416.0" cy="357.5" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="426.3" cy="360.2" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="414.7" cy="365.7" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="428.8" cy="357.3" r="5" fill="#1F2937" stroke="#FFFFFF" stroke-width="1"/>
+<text x="420" y="472" font-size="17" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">High reliability, high validity</text>
+<text x="420" y="493" font-size="14" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="middle">consistent and on target</text>
+</svg>

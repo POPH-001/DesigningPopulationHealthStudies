@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 495" width="620" height="495" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="620" height="495" fill="#FFFFFF"/>
+<defs>
+<marker id="ah-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#008080"/></marker>
+<marker id="ah-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/></marker>
+<marker id="ah-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker>
+</defs>
+<rect x="190" y="8" width="240" height="50" rx="10" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="310.0" y="38.76" font-size="18" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Population</text>
+<line x1="310" y1="58" x2="310" y2="98" stroke="#1F2937" stroke-width="2" marker-end="url(#ah-ink)"/>
+<text x="322" y="84" font-size="15" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="start">representative sample</text>
+<rect x="10" y="104" width="600" height="300" rx="14" fill="#E6F2F2"/>
+<text x="30" y="134" font-size="17" font-weight="700" font-style="normal" fill="#008080" text-anchor="start">One point in time: a snapshot</text>
+<text x="305" y="178" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">Disease (D₁)</text>
+<text x="480" y="178" font-size="16" font-weight="700" font-style="normal" fill="#1F2937" text-anchor="middle">No disease (D₀)</text>
+<text x="213" y="237" font-size="16" font-weight="700" font-style="normal" fill="#7F1D1D" text-anchor="end">Exposed (E₁)</text>
+<text x="213" y="332" font-size="16" font-weight="700" font-style="normal" fill="#1F6F8B" text-anchor="end">Unexposed (E₀)</text>
+<rect x="225" y="190" width="160" height="80" rx="10" fill="#F6E7E7" stroke="#7F1D1D" stroke-width="2"/>
+<text x="305.0" y="238.96" font-size="28" font-weight="600" font-style="italic" fill="#1F2937" text-anchor="middle">a</text>
+<rect x="400" y="190" width="160" height="80" rx="10" fill="#F6E7E7" stroke="#7F1D1D" stroke-width="2"/>
+<text x="480.0" y="238.96" font-size="28" font-weight="600" font-style="italic" fill="#1F2937" text-anchor="middle">b</text>
+<rect x="225" y="285" width="160" height="80" rx="10" fill="#E3EFF4" stroke="#1F6F8B" stroke-width="2"/>
+<text x="305.0" y="333.96" font-size="28" font-weight="600" font-style="italic" fill="#1F2937" text-anchor="middle">c</text>
+<rect x="400" y="285" width="160" height="80" rx="10" fill="#E3EFF4" stroke="#1F6F8B" stroke-width="2"/>
+<text x="480.0" y="333.96" font-size="28" font-weight="600" font-style="italic" fill="#1F2937" text-anchor="middle">d</text>
+<text x="310" y="392" font-size="15" font-weight="400" font-style="italic" fill="#6B7280" text-anchor="middle">E and D are measured at the same time</text>
+<line x1="10" y1="440" x2="610" y2="440" stroke="#6B7280" stroke-width="2" marker-end="url(#ah-grey)"/>
+<text x="610" y="430" font-size="15" font-weight="600" font-style="normal" fill="#6B7280" text-anchor="end">Time</text>
+<path d="M312,444 l-8,14 h16 z" fill="#008080"/>
+<text x="312" y="478" font-size="15" font-weight="600" font-style="normal" fill="#008080" text-anchor="middle">Study takes place</text>
+</svg>
