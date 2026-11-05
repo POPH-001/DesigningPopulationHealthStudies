@@ -88,7 +88,7 @@
     "href": "index.html#bias-two-main-families",
     "title": "Designing Population Health Studies",
     "section": "Bias: two main families",
-    "text": "Bias: two main families\nBias is systematic error introduced by who ends up in the study or how information is collected.\n\nSelection biasInformation bias\n\n\n\nHealthy worker effect: workers are healthier than the general population\nVolunteer bias: volunteers differ from non-volunteers\nBerkson’s bias: hospital-based samples distort associations\nLoss to follow-up: those who drop out differ from those who stay\n\n\n\n\nRecall bias: cases remember past exposures differently from controls\nInterviewer bias: knowing who is a case changes how questions are asked\nSocial desirability bias: under-reporting of stigmatized behaviors\nMisclassification: imperfect tests or records place people in the wrong group"
+    "text": "Bias: two main families\nBias is systematic error introduced by who ends up in the study or how information is collected.\n\nSelection biasInformation bias\n\n\n\nHealthy worker effect: workers are healthier than the general population\nVolunteer bias: volunteers differ from non-volunteers\nLoss to follow-up: those who drop out differ from those who stay\n\n\n\n\nRecall bias: cases remember past exposures differently from controls\nInterviewer bias: knowing who is a case changes how questions are asked\nSocial desirability bias: under-reporting of stigmatized behaviors\nMisclassification: imperfect tests or records place people in the wrong group"
   },
   {
     "objectID": "index.html#confounding",

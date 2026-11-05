@@ -348,7 +348,6 @@ Bias is systematic error introduced by **who ends up in the study** or **how inf
 
 -   **Healthy worker effect:** workers are healthier than the general population
 -   **Volunteer bias:** volunteers differ from non-volunteers
--   **Berkson's bias:** hospital-based samples distort associations
 -   **Loss to follow-up:** those who drop out differ from those who stay
 
 ### Information bias
